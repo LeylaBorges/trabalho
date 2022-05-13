@@ -12,7 +12,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 @RestController
-@CrossOrigin(origins = "*",maxAge = 3600)
+@CrossOrigin(origins = "http://localhost:3000",maxAge = 3600)
 public class CosmeticoController {
     private CosmeticoService cosmeticoService;
 
@@ -21,7 +21,7 @@ public class CosmeticoController {
         this.cosmeticoService = cosmeticoService;
     }
 
-    @GetMapping(value = "/listar-cosmetico")
+    @GetMapping(value = "/listar-cosmeticos")
     public List<Cosmetico> listar() {
 
         List<Cosmetico> lista =cosmeticoService.listar();

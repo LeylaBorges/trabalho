@@ -12,10 +12,30 @@ public class Cosmetico {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
+    public String getLinha() {
+        return linha;
+    }
 
-    @Column(name = "produto")
-    private String produto;
+    public void setLinha(String linha) {
+        this.linha = linha;
+    }
 
+    public String getValidade() {
+        return validade;
+    }
+
+    public void setValidade(String validade) {
+        this.validade = validade;
+    }
+
+    @Column(name = "nome")
+    private String nome;
+
+    @Column(name = "linha")
+    private String linha;
+
+    @Column(name = "validade")
+    private String validade;
     @Column(name = "valor")
     private Integer valor;
 
@@ -27,12 +47,12 @@ public class Cosmetico {
         this.id = id;
     }
 
-    public String getProduto() {
-        return produto;
+    public String getNome() {
+        return nome;
     }
 
-    public void setProduto(String produto) {
-        this.produto = produto;
+    public void setNome(String nome) {
+        this.nome = nome;
     }
 
     public Integer getValor() {
